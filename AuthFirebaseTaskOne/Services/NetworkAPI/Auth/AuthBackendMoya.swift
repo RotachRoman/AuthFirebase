@@ -9,8 +9,6 @@ import Foundation
 import Moya
 
 public enum AuthBackendMoya {
-//    static private let Id = ""
-    
     case checkUser(phone: String, id: String)
 }
 

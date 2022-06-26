@@ -8,15 +8,13 @@
 import UIKit
 import SnapKit
 
-protocol SignInViewHiddenButtonType{
-    func filledTextField(_ filled: Bool)
-}
-
 class SignInViewController: UIViewController {
     
+    //MARK: - Properties
     var delegateTextField: SignInTextFieldDelegate!
     var presenter: SignInPresenter!
     
+    //MARK: - View Elements
     lazy var phoneTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Номер телефона +7(xxx)xxx-xx-xx"
@@ -34,28 +32,25 @@ class SignInViewController: UIViewController {
         return button
     }()
     
+    //MARK: - Live cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegateTextField = SignInTextFieldDelegate(viewController: self)
+        
         setupUI()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .white
-        setupNavigationTitle()
-    }
-    
-    private func setupNavigationTitle(){
-        self.navigationItem.title = "Регистрация"
     }
 }
 
 //MARK: - SignInViewType
-extension SignInViewController: SignInViewType {
-    func start() {
+extension SignInViewController: StartViewType {
+    func start(fromViewController: UIViewController) {
         
-    }    
+    }
 }
 
-extension SignInViewController: SignInViewHiddenButtonType {
+//MARK: - ViewHiddenButtonType
+extension SignInViewController: FilledTextFieldProtocol {
+    //функция для обработки смены состояний заполненности textField
     func filledTextField(_ filled: Bool) {
         forwardButton.isHidden = !filled
     }
@@ -65,15 +60,23 @@ extension SignInViewController: SignInViewHiddenButtonType {
 extension SignInViewController {
     @objc func forwardTapButton(sender: UIButton!) {
         guard let text = phoneTextField.text else { return }
-        presenter.forwardTapButton(text: text, viewController: self)
+        presenter.forwardTapButton(phone: text, viewController: self)
     }
 }
 
 //MARK: - Setup UI
 extension SignInViewController {
     private func setupUI() {
+        view.backgroundColor = .white
+        setupNavigationTitle()
+        
         setupSubviews()
         setupConstraints()
+    }
+    
+    private func setupNavigationTitle(){
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = "Регистрация"
     }
     
     private func setupSubviews(){

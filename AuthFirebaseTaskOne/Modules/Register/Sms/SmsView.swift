@@ -8,12 +8,8 @@
 import UIKit
 import SnapKit
 
-protocol SmsViewHiddenButtonType{
-    func filledTextField(_ switched: Bool)
-}
-
 class SmsViewController: UIViewController {
-    
+    //MARK: - Properties
     var delegateTextField: SmsTextFieldDelegate!
     var presenter: SmsPresenter!
     
@@ -22,7 +18,6 @@ class SmsViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Код подтверждения XXX XXX"
         
-        textField.textAlignment = .center
         textField.delegate = delegateTextField
         textField.returnKeyType = .continue
         textField.keyboardType = .decimalPad
@@ -55,30 +50,23 @@ class SmsViewController: UIViewController {
     //MARK: - Live cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegateTextField = SmsTextFieldDelegate(viewController: self)
-        setupUI()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .white
-        setupNavigationTitle()
-    }
-    
-    private func setupNavigationTitle(){
-        self.navigationItem.title = "Ввод SMS-кода"
-    }
-}
-
-//MARK: - SignInViewType
-extension SmsViewController: SmsViewType {
-    func start() {
+        delegateTextField = SmsTextFieldDelegate(viewController: self)
         setupUI()
     }
 }
 
-//MARK: - SmsViewHiddenButtonType
-extension SmsViewController: SmsViewHiddenButtonType {
+//MARK: - StartViewType
+extension SmsViewController: StartViewType {
+    func start(fromViewController viewController: UIViewController) {
+        viewController.navigationController?.pushViewController(self, animated: true)
+    }
+}
+
+//MARK: - FilledTextFieldProtocol
+extension SmsViewController: FilledTextFieldProtocol {
+    //функция для обработки смены состояний заполненности textField
     func filledTextField(_ filled: Bool) {
         forwardButton.isHidden = !filled
-        
     }
 }
 
@@ -88,21 +76,16 @@ extension SmsViewController {
     func forwardTapButton(sender: UIButton!) {
         guard let text = verifiredTextField.text else { return }
         presenter.forwardTapButton(text: text, viewController: self)
-        
-//        if repeatSmsButton.isHidden {
-////            presenter.timerTapButton(view: self)
-//            self.repeatSmsButton.isHidden = false
-//        }
     }
     
     @objc
     func repeatSmsTap(sender: UIButton!){
-        presenter.timerTapButton(view: self)
+        presenter.sendRepeatSmsButton(view: self)
     }
 }
 
-//MARK: - SignInViewType
-extension SmsViewController: SmsTimerView{
+//MARK: - SmsTimerView
+extension SmsViewController: SmsTimerView {
     func timerWork(_ work: Bool) {
         self.timerLabel.isHidden = !work
         self.repeatSmsButton.isEnabled = !work
@@ -123,8 +106,16 @@ extension SmsViewController: SmsTimerView{
 //MARK: - Setup UI
 extension SmsViewController {
     private func setupUI() {
+        view.backgroundColor = .white
+        setupNavigationTitle()
+
         setupSubviews()
         setupConstraints()
+    }
+    
+    private func setupNavigationTitle(){
+        self.navigationItem.title = "Ввод SMS-кода"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupSubviews(){

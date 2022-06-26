@@ -9,21 +9,59 @@
 /* Begin PBXBuildFile section */
 		CB0A2F112863ADD8003075C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F102863ADD8003075C0 /* AppDelegate.swift */; };
 		CB0A2F132863ADD8003075C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F122863ADD8003075C0 /* SceneDelegate.swift */; };
-		CB0A2F152863ADD8003075C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F142863ADD8003075C0 /* ViewController.swift */; };
-		CB0A2F182863ADD8003075C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0A2F162863ADD8003075C0 /* Main.storyboard */; };
 		CB0A2F1A2863ADDC003075C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0A2F192863ADDC003075C0 /* Assets.xcassets */; };
 		CB0A2F1D2863ADDC003075C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0A2F1B2863ADDC003075C0 /* LaunchScreen.storyboard */; };
+		CB0A2F2C2863B6BC003075C0 /* SetupAppRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F2B2863B6BC003075C0 /* SetupAppRouterDelegate.swift */; };
+		CB0A2F2E2863B823003075C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB0A2F2D2863B823003075C0 /* GoogleService-Info.plist */; };
+		CB0A2F372863B8C2003075C0 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F362863B8C2003075C0 /* FirebaseAuthManager.swift */; };
+		CB0A2F3B28644AF8003075C0 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F3A28644AF8003075C0 /* SignInView.swift */; };
+		CB0A2F3D28644B03003075C0 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F3C28644B03003075C0 /* SignInPresenter.swift */; };
+		CB0A2F4228644E51003075C0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F4128644E51003075C0 /* Presenter.swift */; };
+		CB0A2F47286460D3003075C0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F46286460D3003075C0 /* MainPresenter.swift */; };
+		CB0A2F49286460F2003075C0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F48286460F2003075C0 /* MainView.swift */; };
+		CB0A2F4C28646B07003075C0 /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F4B28646B07003075C0 /* PhoneFormatter.swift */; };
+		CB0A2F4F28646DAB003075C0 /* SignInTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F4E28646DAB003075C0 /* SignInTextFieldDelegate.swift */; };
+		CB0A2F5228647CCC003075C0 /* SmsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F5128647CCC003075C0 /* SmsPresenter.swift */; };
+		CB0A2F5428647CD5003075C0 /* SmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F5328647CD5003075C0 /* SmsView.swift */; };
+		CB0A2F562864B3A0003075C0 /* SmsTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F552864B3A0003075C0 /* SmsTextFieldDelegate.swift */; };
+		CB0A2F5928651635003075C0 /* ForwardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F5828651635003075C0 /* ForwardButton.swift */; };
+		CB0A2F5B2865A59C003075C0 /* SmsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F5A2865A59C003075C0 /* SmsFormatter.swift */; };
+		CB0A2F5D2865A67C003075C0 /* DigtReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F5C2865A67C003075C0 /* DigtReplacement.swift */; };
+		CB0A2F642866FFE3003075C0 /* AuthBackendMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F632866FFE3003075C0 /* AuthBackendMoya.swift */; };
+		CB0A2F672867AD6A003075C0 /* MaskTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F662867AD6A003075C0 /* MaskTextFieldDelegate.swift */; };
+		CB0A2F6B28686C4D003075C0 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A2F6A28686C4D003075C0 /* ViewType.swift */; };
+		DA1A1983AEC160A4CA8BA270 /* Pods_AuthFirebaseTaskOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D002931EFE2E23864D20ADB0 /* Pods_AuthFirebaseTaskOne.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E7C8A94BA7F8A5AB15DF544 /* Pods-AuthFirebaseTaskOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthFirebaseTaskOne.debug.xcconfig"; path = "Target Support Files/Pods-AuthFirebaseTaskOne/Pods-AuthFirebaseTaskOne.debug.xcconfig"; sourceTree = "<group>"; };
+		B448722F047A2A949F8401EA /* Pods-AuthFirebaseTaskOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthFirebaseTaskOne.release.xcconfig"; path = "Target Support Files/Pods-AuthFirebaseTaskOne/Pods-AuthFirebaseTaskOne.release.xcconfig"; sourceTree = "<group>"; };
 		CB0A2F0D2863ADD8003075C0 /* AuthFirebaseTaskOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthFirebaseTaskOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0A2F102863ADD8003075C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB0A2F122863ADD8003075C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB0A2F142863ADD8003075C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB0A2F172863ADD8003075C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB0A2F192863ADDC003075C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB0A2F1C2863ADDC003075C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB0A2F1E2863ADDC003075C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB0A2F2B2863B6BC003075C0 /* SetupAppRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAppRouterDelegate.swift; sourceTree = "<group>"; };
+		CB0A2F2D2863B823003075C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB0A2F362863B8C2003075C0 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		CB0A2F3A28644AF8003075C0 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CB0A2F3C28644B03003075C0 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		CB0A2F4128644E51003075C0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		CB0A2F46286460D3003075C0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CB0A2F48286460F2003075C0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CB0A2F4B28646B07003075C0 /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
+		CB0A2F4E28646DAB003075C0 /* SignInTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CB0A2F5128647CCC003075C0 /* SmsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsPresenter.swift; sourceTree = "<group>"; };
+		CB0A2F5328647CD5003075C0 /* SmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsView.swift; sourceTree = "<group>"; };
+		CB0A2F552864B3A0003075C0 /* SmsTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CB0A2F5828651635003075C0 /* ForwardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardButton.swift; sourceTree = "<group>"; };
+		CB0A2F5A2865A59C003075C0 /* SmsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsFormatter.swift; sourceTree = "<group>"; };
+		CB0A2F5C2865A67C003075C0 /* DigtReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigtReplacement.swift; sourceTree = "<group>"; };
+		CB0A2F632866FFE3003075C0 /* AuthBackendMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBackendMoya.swift; sourceTree = "<group>"; };
+		CB0A2F662867AD6A003075C0 /* MaskTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTextFieldDelegate.swift; sourceTree = "<group>"; };
+		CB0A2F6A28686C4D003075C0 /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
+		D002931EFE2E23864D20ADB0 /* Pods_AuthFirebaseTaskOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthFirebaseTaskOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +69,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1A1983AEC160A4CA8BA270 /* Pods_AuthFirebaseTaskOne.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74E261A37ADE105FFA4CFB2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D002931EFE2E23864D20ADB0 /* Pods_AuthFirebaseTaskOne.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E6E3723403452CC032DB657 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E7C8A94BA7F8A5AB15DF544 /* Pods-AuthFirebaseTaskOne.debug.xcconfig */,
+				B448722F047A2A949F8401EA /* Pods-AuthFirebaseTaskOne.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CB0A2F042863ADD8003075C0 = {
 			isa = PBXGroup;
 			children = (
 				CB0A2F0F2863ADD8003075C0 /* AuthFirebaseTaskOne */,
 				CB0A2F0E2863ADD8003075C0 /* Products */,
+				8E6E3723403452CC032DB657 /* Pods */,
+				74E261A37ADE105FFA4CFB2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +114,208 @@
 		CB0A2F0F2863ADD8003075C0 /* AuthFirebaseTaskOne */ = {
 			isa = PBXGroup;
 			children = (
-				CB0A2F102863ADD8003075C0 /* AppDelegate.swift */,
-				CB0A2F122863ADD8003075C0 /* SceneDelegate.swift */,
-				CB0A2F142863ADD8003075C0 /* ViewController.swift */,
-				CB0A2F162863ADD8003075C0 /* Main.storyboard */,
-				CB0A2F192863ADDC003075C0 /* Assets.xcassets */,
-				CB0A2F1B2863ADDC003075C0 /* LaunchScreen.storyboard */,
-				CB0A2F1E2863ADDC003075C0 /* Info.plist */,
+				CB0A2F282863B19D003075C0 /* Configurations */,
+				CB0A2F272863B186003075C0 /* Assets */,
+				CB0A2F242863B129003075C0 /* App */,
+				CB0A2F4A28646AF4003075C0 /* Support files */,
+				CB0A2F612866FCC8003075C0 /* Services */,
+				CB0A2F4028644E3C003075C0 /* Protocols */,
+				CB0A2F2F2863B872003075C0 /* Managers */,
+				CB0A2F3828644AC9003075C0 /* Modules */,
 			);
 			path = AuthFirebaseTaskOne;
+			sourceTree = "<group>";
+		};
+		CB0A2F242863B129003075C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F252863B146003075C0 /* UI */,
+				CB0A2F262863B14D003075C0 /* AppSettings */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CB0A2F252863B146003075C0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F1B2863ADDC003075C0 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CB0A2F262863B14D003075C0 /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F102863ADD8003075C0 /* AppDelegate.swift */,
+				CB0A2F122863ADD8003075C0 /* SceneDelegate.swift */,
+				CB0A2F2B2863B6BC003075C0 /* SetupAppRouterDelegate.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		CB0A2F272863B186003075C0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F192863ADDC003075C0 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CB0A2F282863B19D003075C0 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F1E2863ADDC003075C0 /* Info.plist */,
+				CB0A2F2D2863B823003075C0 /* GoogleService-Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		CB0A2F2F2863B872003075C0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F302863B879003075C0 /* FirebaseManagers */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CB0A2F302863B879003075C0 /* FirebaseManagers */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F362863B8C2003075C0 /* FirebaseAuthManager.swift */,
+			);
+			path = FirebaseManagers;
+			sourceTree = "<group>";
+		};
+		CB0A2F3828644AC9003075C0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F652867204A003075C0 /* Register */,
+				CB0A2F452864609F003075C0 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CB0A2F3928644AE4003075C0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F3C28644B03003075C0 /* SignInPresenter.swift */,
+				CB0A2F3A28644AF8003075C0 /* SignInView.swift */,
+				CB0A2F602865D8D2003075C0 /* Delegates */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		CB0A2F4028644E3C003075C0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F4128644E51003075C0 /* Presenter.swift */,
+				CB0A2F6A28686C4D003075C0 /* ViewType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CB0A2F452864609F003075C0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F46286460D3003075C0 /* MainPresenter.swift */,
+				CB0A2F48286460F2003075C0 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CB0A2F4A28646AF4003075C0 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F682867AEB7003075C0 /* Delegates */,
+				CB0A2F5728651619003075C0 /* CustomViewElements */,
+				CB0A2F4D28646B0C003075C0 /* Formatters */,
+			);
+			path = "Support files";
+			sourceTree = "<group>";
+		};
+		CB0A2F4D28646B0C003075C0 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F4B28646B07003075C0 /* PhoneFormatter.swift */,
+				CB0A2F5A2865A59C003075C0 /* SmsFormatter.swift */,
+				CB0A2F5C2865A67C003075C0 /* DigtReplacement.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		CB0A2F5028647CAB003075C0 /* Sms */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F5128647CCC003075C0 /* SmsPresenter.swift */,
+				CB0A2F5328647CD5003075C0 /* SmsView.swift */,
+				CB0A2F5E2865D8BB003075C0 /* Delegates */,
+			);
+			path = Sms;
+			sourceTree = "<group>";
+		};
+		CB0A2F5728651619003075C0 /* CustomViewElements */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F5828651635003075C0 /* ForwardButton.swift */,
+			);
+			path = CustomViewElements;
+			sourceTree = "<group>";
+		};
+		CB0A2F5E2865D8BB003075C0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F552864B3A0003075C0 /* SmsTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CB0A2F602865D8D2003075C0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F4E28646DAB003075C0 /* SignInTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CB0A2F612866FCC8003075C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F622866FCD4003075C0 /* NetworkAPI */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CB0A2F622866FCD4003075C0 /* NetworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F692867B608003075C0 /* Auth */,
+			);
+			path = NetworkAPI;
+			sourceTree = "<group>";
+		};
+		CB0A2F652867204A003075C0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F3928644AE4003075C0 /* SignIn */,
+				CB0A2F5028647CAB003075C0 /* Sms */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CB0A2F682867AEB7003075C0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F662867AD6A003075C0 /* MaskTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CB0A2F692867B608003075C0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CB0A2F632866FFE3003075C0 /* AuthBackendMoya.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB0A2F212863ADDC003075C0 /* Build configuration list for PBXNativeTarget "AuthFirebaseTaskOne" */;
 			buildPhases = (
+				2DA209DFB8DEC75FA4A0C886 /* [CP] Check Pods Manifest.lock */,
 				CB0A2F092863ADD8003075C0 /* Sources */,
 				CB0A2F0A2863ADD8003075C0 /* Frameworks */,
 				CB0A2F0B2863ADD8003075C0 /* Resources */,
+				471A19B8A983293F5842FDD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +380,78 @@
 			files = (
 				CB0A2F1D2863ADDC003075C0 /* LaunchScreen.storyboard in Resources */,
 				CB0A2F1A2863ADDC003075C0 /* Assets.xcassets in Resources */,
-				CB0A2F182863ADD8003075C0 /* Main.storyboard in Resources */,
+				CB0A2F2E2863B823003075C0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DA209DFB8DEC75FA4A0C886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthFirebaseTaskOne-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		471A19B8A983293F5842FDD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthFirebaseTaskOne/Pods-AuthFirebaseTaskOne-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthFirebaseTaskOne/Pods-AuthFirebaseTaskOne-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthFirebaseTaskOne/Pods-AuthFirebaseTaskOne-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB0A2F092863ADD8003075C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB0A2F152863ADD8003075C0 /* ViewController.swift in Sources */,
+				CB0A2F5B2865A59C003075C0 /* SmsFormatter.swift in Sources */,
+				CB0A2F5428647CD5003075C0 /* SmsView.swift in Sources */,
+				CB0A2F6B28686C4D003075C0 /* ViewType.swift in Sources */,
+				CB0A2F3D28644B03003075C0 /* SignInPresenter.swift in Sources */,
+				CB0A2F49286460F2003075C0 /* MainView.swift in Sources */,
+				CB0A2F372863B8C2003075C0 /* FirebaseAuthManager.swift in Sources */,
+				CB0A2F3B28644AF8003075C0 /* SignInView.swift in Sources */,
+				CB0A2F642866FFE3003075C0 /* AuthBackendMoya.swift in Sources */,
+				CB0A2F5D2865A67C003075C0 /* DigtReplacement.swift in Sources */,
+				CB0A2F4C28646B07003075C0 /* PhoneFormatter.swift in Sources */,
+				CB0A2F4F28646DAB003075C0 /* SignInTextFieldDelegate.swift in Sources */,
+				CB0A2F5228647CCC003075C0 /* SmsPresenter.swift in Sources */,
+				CB0A2F4228644E51003075C0 /* Presenter.swift in Sources */,
+				CB0A2F2C2863B6BC003075C0 /* SetupAppRouterDelegate.swift in Sources */,
+				CB0A2F47286460D3003075C0 /* MainPresenter.swift in Sources */,
+				CB0A2F5928651635003075C0 /* ForwardButton.swift in Sources */,
 				CB0A2F112863ADD8003075C0 /* AppDelegate.swift in Sources */,
+				CB0A2F562864B3A0003075C0 /* SmsTextFieldDelegate.swift in Sources */,
+				CB0A2F672867AD6A003075C0 /* MaskTextFieldDelegate.swift in Sources */,
 				CB0A2F132863ADD8003075C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +459,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB0A2F162863ADD8003075C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB0A2F172863ADD8003075C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB0A2F1B2863ADDC003075C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +586,7 @@
 		};
 		CB0A2F222863ADDC003075C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7C8A94BA7F8A5AB15DF544 /* Pods-AuthFirebaseTaskOne.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,10 +594,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3Y4YT75U8C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AuthFirebaseTaskOne/Info.plist;
+				INFOPLIST_FILE = AuthFirebaseTaskOne/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +615,7 @@
 		};
 		CB0A2F232863ADDC003075C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B448722F047A2A949F8401EA /* Pods-AuthFirebaseTaskOne.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,10 +623,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3Y4YT75U8C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AuthFirebaseTaskOne/Info.plist;
+				INFOPLIST_FILE = AuthFirebaseTaskOne/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

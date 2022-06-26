@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol MainViewControllerType: AnyObject {
+}
+
+class MainPresenter: PresenterType {
+    typealias presenterViewController = MainViewControllerType
+    var view: presenterViewController
+    
+    required init(view: presenterViewController) {
+        self.view = view
+    }
+}

@@ -5,4 +5,11 @@
 //  Created by Rotach Roman on 23.06.2022.
 //
 
-import Foundation
+import UIKit
+
+protocol PresenterBase: AnyObject {}
+
+protocol PresenterType: PresenterBase {
+    associatedtype PresenterViewController
+    init(view: PresenterViewController)
+}

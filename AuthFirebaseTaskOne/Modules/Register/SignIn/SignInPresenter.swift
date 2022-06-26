@@ -6,31 +6,38 @@
 //
 
 import Foundation
-import UIKit
 
-protocol SignInViewType: AnyObject {
-    func start()
-}
 
-class SignInPresenter: PresenterType {
-    typealias presenterViewController = SignInViewType
+class SignInPresenter {
+    typealias PresenterViewController = StartViewType
     
-    weak var view: SignInViewType?
+    weak var view: PresenterViewController?
     
-    required init(view: SignInViewType) {
+    required init(view: PresenterViewController) {
         self.view = view
     }
-
-    func forwardTapButton(text: String, viewController: UIViewController){
-        let firebaseNumber = text.replacingOccurrences(of: "[^0-9, +]", with: "", options: .regularExpression)
-        AuthManager.shared.startAuth(phoneNumber: firebaseNumber) { success in
+    
+    //MARK: - Buttons
+    //Обработка функционала по нажатию на кнопку
+    func forwardTapButton(phone: String, viewController: ViewController){
+        // удаление скобок и пробелов из номера телефона
+        let firebasePhone = phone.replacingOccurrences(of: "[^0-9, +]", with: "", options: .regularExpression)
+        //проверка на существование зарегестрированного номера
+        AuthManager.shared.startAuth(phoneNumber: firebasePhone) { [unowned self] success in
             guard success else { return }
-            DispatchQueue.main.async {
-                let vc = SmsViewController()
-                let smsPresenter = SmsPresenter(phoneNumber: firebaseNumber)
-                vc.presenter = smsPresenter
-                viewController.navigationController?.pushViewController(vc, animated: true)
-            }
+            forwardViewController(phone: firebasePhone, viewController: viewController)
+        }
+    }
+    
+    //    MARK: - Supporting func
+    private func forwardViewController(phone: String, viewController: ViewController){
+        DispatchQueue.main.async {
+            let vc = SmsViewController()
+            let smsPresenter = SmsPresenter(view: vc, phoneNumber: phone)
+            
+            vc.presenter = smsPresenter
+            viewController.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
+   

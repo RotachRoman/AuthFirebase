@@ -10,57 +10,38 @@ import FirebaseAuth
 
 protocol SetupAppRouterType {
     init(window: UIWindow?)
-    func getAppRouter() -> AppRouterType?
 }
 
 final class SetupAppRouter: SetupAppRouterType{
     private var window: UIWindow?
-    private var appRouter: AppRouterType?
     
     required init(window: UIWindow?){
         self.window = window
         setup()
     }
     
-    func getAppRouter() -> AppRouterType? {
-        return appRouter
-    }
-    
     private func setup() {
-        var appViewController: UIViewController
-        var presenter: PresenterBase
-        
+        // может пригодиться для выхода из учетной записи
         try? Auth.auth().signOut()
-        
         if Auth.auth().currentUser == nil {
-            (appViewController, presenter) = setupSignInViewController()
-//            presenter =
+            setupSignInViewController()
         } else {
-            (appViewController, presenter) = setupAuthViewController()
-            
+            setupAuthViewController()
         }
-        self.appRouter = AppRouter(appViewController: appViewController, presenter: presenter)
-        self.appRouter?.startApplication()
     }
     
     //MARK: - SetupViewController
-    private func setupSignInViewController() -> (UIViewController, PresenterBase) {
+    private func setupSignInViewController() {
         let viewController = SignInViewController(nibName: nil, bundle: nil)
         setupViewController(viewController: viewController)
         
-        let presenter = SignInPresenter(view: viewController as SignInViewType)
+        let presenter = SignInPresenter(view: viewController)
         viewController.presenter = presenter
-        
-        return (viewController, presenter)
     }
     
-    private func setupAuthViewController() -> (UIViewController, PresenterBase) {
+    private func setupAuthViewController() {
         let viewController = MainViewController(nibName: nil, bundle: nil)
         setupViewController(viewController: viewController)
-        
-        let presenter = MainPresenter(view: viewController as MainViewControllerType)
-        
-        return (viewController, presenter)
     }
     
     private func setupViewController(viewController: UIViewController){
